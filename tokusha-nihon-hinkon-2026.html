@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特集｜日本の貧困 — 「一億総中流」の終焉と分断社会の現実</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+      line-height: 1.85;
+      color: #222;
+      background: #f5f5f0;
+    }
+
+    /* ======= ヘッダー ======= */
+    .cover {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff;
+      padding: 60px 24px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(229, 57, 53, 0.12);
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -40px;
+      width: 250px; height: 250px;
+      border-radius: 50%;
+      background: rgba(229, 57, 53, 0.08);
+    }
+    .cover-label {
+      display: inline-block;
+      background: #e53935;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      padding: 4px 16px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .cover h1 {
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .cover h1 span {
+      display: block;
+      font-size: 0.6em;
+      font-weight: 400;
+      opacity: 0.75;
+      margin-bottom: 8px;
+    }
+    .cover-meta {
+      font-size: 0.85rem;
+      opacity: 0.65;
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .cover-tagline {
+      margin-top: 28px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #ffcdd2;
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 20px;
+    }
+
+    /* ======= メインコンテナ ======= */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 16px 60px;
+    }
+
+    /* ======= 目次 ======= */
+    .toc {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px 28px 24px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border-left: 5px solid #e53935;
+    }
+    .toc h2 {
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      color: #e53935;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .toc ol {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .toc ol li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+    .toc .toc-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      background: #e53935;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .toc a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .toc a:hover .toc-title { text-decoration: underline; color: #e53935; }
+    .toc .toc-text { padding-top: 3px; font-weight: 500; }
+    .toc .toc-title { display: block; font-weight: 700; color: #1a1a2e; }
+    .toc .toc-sub { font-size: 0.82rem; color: #888; display: block; }
+
+    /* ======= セクション共通 ======= */
+    .section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 36px 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      scroll-margin-top: 24px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #e53935;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 900;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .section-title-wrap h2 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #1a1a2e;
+      line-height: 1.35;
+    }
+    .section-title-wrap .section-subtitle {
+      font-size: 0.8rem;
+      color: #e53935;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    /* ======= 本文 ======= */
+    .body-text { font-size: 0.95rem; color: #333; margin-bottom: 16px; }
+    .body-text:last-child { margin-bottom: 0; }
+
+    /* ======= データカード ======= */
+    .data-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .data-card {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+    .data-card .label {
+      font-size: 0.72rem;
+      color: #888;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .data-card .value {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #e53935;
+      line-height: 1;
+    }
+    .data-card .note {
+      font-size: 0.7rem;
+      color: #aaa;
+      margin-top: 5px;
+    }
+
+    /* ======= 用語解説ボックス ======= */
+    details.glossary {
+      background: #f8f9ff;
+      border: 1px solid #c5cae9;
+      border-radius: 8px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+    details.glossary summary {
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+    }
+    details.glossary summary::-webkit-details-marker { display: none; }
+    .glossary-title {
+      font-size: 0.82rem;
+      font-weight: bold;
+      color: #3949ab;
+      letter-spacing: 0.06em;
+      padding: 13px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #eef0fb;
+      transition: background 0.15s;
+    }
+    .glossary-title:hover { background: #e3e6f8; }
+    .glossary-toggle {
+      font-size: 0.75rem;
+      color: #7986cb;
+      font-weight: normal;
+      white-space: nowrap;
+    }
+    details.glossary:not([open]) .glossary-toggle::after { content: '▼ 開く'; }
+    details.glossary[open]       .glossary-toggle::after { content: '▲ 閉じる'; }
+    .glossary-grid {
+      padding: 16px 18px 18px;
+    }
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 12px;
+    }
+    .glossary-item {
+      background: #fff;
+      border-radius: 6px;
+      padding: 12px 14px;
+      border-left: 3px solid #3949ab;
+    }
+    .glossary-term {
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #1a237e;
+      margin-bottom: 4px;
+    }
+    .glossary-def {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .glossary-def em {
+      color: #e53935;
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    /* ======= 比較テーブル ======= */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.88rem;
+    }
+    .compare-table thead tr {
+      background: #1a1a2e;
+      color: #fff;
+    }
+    .compare-table thead th {
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: bold;
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: #fafafa;
+    }
+    .compare-table tbody td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .compare-table .col-item { font-weight: bold; color: #444; width: 34%; }
+    .compare-table .col-old { color: #666; width: 33%; }
+    .compare-table .col-new { color: #e53935; font-weight: bold; width: 33%; }
+    .compare-table .tag-down {
+      background: #ffebee;
+      color: #c62828;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 4px;
+    }
+    .compare-table .tag-up {
+      background: #fce4ec;
+      color: #ad1457;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 4px;
+    }
+
+    /* ======= 引用ボックス ======= */
+    .quote-box {
+      border-left: 4px solid #e53935;
+      padding: 14px 18px;
+      background: #fff8f8;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+    }
+    .quote-box p {
+      font-size: 0.92rem;
+      color: #333;
+      font-style: italic;
+    }
+    .quote-box .quote-src {
+      font-size: 0.78rem;
+      color: #999;
+      margin-top: 8px;
+      font-style: normal;
+    }
+
+    /* ======= ハイライトボックス ======= */
+    .highlight-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 20px 0;
+    }
+    .highlight-box .hl-title {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #e65100;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+    .highlight-box p {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    /* ======= ポイントリスト ======= */
+    .point-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .point-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #eee;
+      font-size: 0.92rem;
+    }
+    .point-list li:last-child { border-bottom: none; }
+    .point-list .bullet {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      background: #e53935;
+      color: #fff;
+      font-size: 0.65rem;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 3px;
+      font-weight: bold;
+    }
+
+    /* ======= チャートラベル共通 ======= */
+    .chart-wrap {
+      margin: 24px 0;
+      background: #fafafa;
+      border-radius: 8px;
+      padding: 20px 16px 14px;
+      border: 1px solid #eee;
+    }
+    .chart-title {
+      font-size: 0.82rem;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+    .chart-note {
+      font-size: 0.72rem;
+      color: #aaa;
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    /* ======= 横棒グラフ（CSSのみ） ======= */
+    .bar-chart { display: flex; flex-direction: column; gap: 10px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; }
+    .bar-row-label {
+      font-size: 0.78rem;
+      color: #555;
+      width: 110px;
+      flex-shrink: 0;
+      text-align: right;
+      line-height: 1.3;
+    }
+    .bar-track {
+      flex: 1;
+      background: #ececec;
+      border-radius: 4px;
+      height: 28px;
+      position: relative;
+      overflow: visible;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      font-size: 0.78rem;
+      font-weight: bold;
+      color: #fff;
+      transition: width 0.3s;
+      white-space: nowrap;
+    }
+    .bar-fill.accent { background: #e53935; }
+    .bar-fill.mid    { background: #ef6c00; }
+    .bar-fill.old    { background: #90a4ae; }
+    .bar-fill.green  { background: #2e7d32; }
+    .bar-fill.blue   { background: #1565c0; }
+
+    /* 正負混在グラフ */
+    .dual-bar-chart { display: flex; flex-direction: column; gap: 10px; }
+    .dual-row { display: flex; align-items: center; gap: 0; }
+    .dual-label {
+      font-size: 0.78rem;
+      color: #555;
+      width: 120px;
+      flex-shrink: 0;
+      text-align: right;
+      padding-right: 8px;
+      line-height: 1.3;
+    }
+    .dual-center {
+      width: 1px;
+      height: 28px;
+      background: #999;
+      flex-shrink: 0;
+    }
+    .dual-track-neg {
+      width: 160px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .dual-track-pos {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .dual-bar-neg {
+      background: #b71c1c;
+      height: 24px;
+      border-radius: 4px 0 0 4px;
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .dual-bar-pos {
+      background: #2e7d32;
+      height: 24px;
+      border-radius: 0 4px 4px 0;
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .dual-axis-label {
+      font-size: 0.7rem;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0 0 120px;
+    }
+
+    /* ======= 2列比較グラフ（内部留保 vs 労働分配率） ======= */
+    .two-col-chart {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .metric-block {
+      background: #fafafa;
+      border-radius: 8px;
+      padding: 16px 14px;
+      border: 1px solid #eee;
+      text-align: center;
+    }
+    .metric-block .m-label {
+      font-size: 0.75rem;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .metric-block .m-arrow {
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .metric-block .m-arrow.up   { color: #b71c1c; }
+    .metric-block .m-arrow.down { color: #1565c0; }
+    .metric-block .m-before, .metric-block .m-after {
+      font-size: 0.82rem;
+      margin-top: 6px;
+    }
+    .metric-block .m-before { color: #aaa; }
+    .metric-block .m-after  { color: #222; font-weight: bold; }
+
+    /* ======= 予測タイムライン ======= */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      margin: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: #e0e0e0;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e53935;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #e53935;
+    }
+    .timeline-item.optimistic::before { background: #2e7d32; box-shadow: 0 0 0 2px #2e7d32; }
+    .timeline-item.pessimistic::before { background: #37474f; box-shadow: 0 0 0 2px #37474f; }
+    .timeline-year {
+      font-size: 0.78rem;
+      font-weight: bold;
+      color: #e53935;
+      letter-spacing: 0.05em;
+    }
+    .timeline-item.optimistic .timeline-year { color: #2e7d32; }
+    .timeline-item.pessimistic .timeline-year { color: #37474f; }
+    .timeline-text {
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 4px;
+    }
+
+    /* ======= 「〇〇が意味すること」セクション ======= */
+    .meaning-box {
+      background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+      color: #fff;
+      border-radius: 10px;
+      padding: 32px 28px;
+      margin-bottom: 28px;
+      scroll-margin-top: 24px;
+    }
+    .meaning-box h2 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      color: #ffcdd2;
+    }
+    .meaning-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .meaning-list li {
+      background: rgba(255,255,255,0.07);
+      border-radius: 8px;
+      padding: 16px 18px;
+      border-left: 3px solid #e53935;
+    }
+    .meaning-list .m-subject {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #ffcdd2;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .meaning-list .m-body {
+      font-size: 0.92rem;
+      color: #e0e0e0;
+      line-height: 1.65;
+    }
+
+    /* ======= 出典 ======= */
+    .sources {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .sources h3 {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #999;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .sources ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .sources li {
+      font-size: 0.8rem;
+      color: #888;
+      padding-left: 12px;
+      border-left: 2px solid #ddd;
+    }
+
+    /* ======= フッター ======= */
+    .footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #bbb;
+      padding: 24px 0;
+    }
+
+    /* ======= レスポンシブ ======= */
+    @media (max-width: 480px) {
+      .section { padding: 24px 18px; }
+      .data-cards { grid-template-columns: repeat(2, 1fr); }
+      .compare-table { font-size: 0.8rem; }
+      .compare-table thead th,
+      .compare-table tbody td { padding: 10px 10px; }
+      .two-col-chart { grid-template-columns: 1fr; }
+      .bar-row-label { width: 80px; font-size: 0.72rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== カバー ===== -->
+<div class="cover">
+  <div class="cover-label">TOKO LIFE TREND NEWS ／ 特集</div>
+  <h1>
+    <span>日本の貧困</span>
+    「一億総中流」の終焉と<br>分断社会の現実
+  </h1>
+  <p class="cover-tagline">7人に1人が「最下層」——あなたの隣にある貧困の構造</p>
+  <p class="cover-meta">2026年4月17日　社内勉強会資料</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 目次（アンカーリンク付き） ===== -->
+  <div class="toc">
+    <h2>目次 — Contents</h2>
+    <ol>
+      <li>
+        <span class="toc-num">1</span>
+        <a href="#sec1">
+          <span class="toc-text">
+            <span class="toc-title">10年前との対比</span>
+            <span class="toc-sub">数字で見る「中流崩壊」の軌跡</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <span class="toc-num">2</span>
+        <a href="#sec2">
+          <span class="toc-text">
+            <span class="toc-title">現状の深堀り</span>
+            <span class="toc-sub">アンダークラス890万人の実態と構造</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <span class="toc-num">3</span>
+        <a href="#sec3">
+          <span class="toc-text">
+            <span class="toc-title">本当に貧困になったのか？</span>
+            <span class="toc-sub">反論データと「見えにくい貧困」の裏付け</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <span class="toc-num">4</span>
+        <a href="#sec4">
+          <span class="toc-text">
+            <span class="toc-title">これからの予測</span>
+            <span class="toc-sub">格差固定化が加速するシナリオと変革のポイント</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <span class="toc-num" style="background:#1a1a2e;">✦</span>
+        <a href="#sec5">
+          <span class="toc-text">
+            <span class="toc-title">「格差社会」が意味すること</span>
+            <span class="toc-sub">このデータは私たちに何を問いかけているか</span>
+          </span>
+        </a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ===== Section 1: 10年前との対比 ===== -->
+  <div class="section" id="sec1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div class="section-title-wrap">
+        <div class="section-subtitle">10 Years Ago vs. Now</div>
+        <h2>10年前との対比——数字が語る「中流崩壊」の軌跡</h2>
+      </div>
+    </div>
+
+    <p class="body-text">かつて「一億総中流」と呼ばれた日本社会。その言葉が通用したのは、バブル崩壊前の1990年代までだった。以降の30年、特に直近10年で何が変わったのかを、主要指標で確認する。</p>
+
+    <!-- 図1: 世帯所得中央値の推移 -->
+    <div class="chart-wrap">
+      <div class="chart-title">図1｜世帯所得（年額）中央値の推移</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-row-label">1993年<br>（バブル後）</div>
+          <div class="bar-track">
+            <div class="bar-fill old" style="width:100%;">550万円</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">2015年<br>（10年前）</div>
+          <div class="bar-track">
+            <div class="bar-fill mid" style="width:80%;">440万円</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">2023年<br>（現在）</div>
+          <div class="bar-track">
+            <div class="bar-fill accent" style="width:74.5%;">410万円</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-note">出典：厚生労働省「国民生活基礎調査」｜30年で▲25%減</div>
+    </div>
+
+    <!-- 図2: 内部留保 vs 労働分配率 -->
+    <div class="chart-wrap">
+      <div class="chart-title">図2｜企業の分配先の変化——内部留保↑ vs 労働分配率↓</div>
+      <div class="two-col-chart">
+        <div class="metric-block">
+          <div class="m-label">内部留保（企業）</div>
+          <div class="m-arrow up">↑</div>
+          <div class="m-before">2013年頃：約400兆円</div>
+          <div class="m-after">2024年：638兆円<br><small style="color:#e53935;">13年連続で過去最高</small></div>
+        </div>
+        <div class="metric-block">
+          <div class="m-label">労働分配率（人件費の割合）</div>
+          <div class="m-arrow down">↓</div>
+          <div class="m-before">2013年頃：67〜68%</div>
+          <div class="m-after">2024年：64.2%<br><small style="color:#1565c0;">下落傾向が続く</small></div>
+        </div>
+      </div>
+      <div class="chart-note">出典：財務省「法人企業統計」｜企業の利益が株主・内部留保に偏重</div>
+    </div>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>指標</th>
+          <th>約10年前（2013〜15年頃）</th>
+          <th>現在（2021〜25年）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-item">世帯所得の中央値</td>
+          <td class="col-old">約440〜450万円</td>
+          <td class="col-new">410万円 <span class="tag-down">▼減少</span></td>
+        </tr>
+        <tr>
+          <td class="col-item">ジニ係数（当初所得）</td>
+          <td class="col-old">2014年に一時過去最高</td>
+          <td class="col-new">0.570（2021年）<span class="tag-up">▲悪化</span></td>
+        </tr>
+        <tr>
+          <td class="col-item">相対的貧困率</td>
+          <td class="col-old">約16%前後</td>
+          <td class="col-new">15.4%（G7で米国に次ぐ2位）</td>
+        </tr>
+        <tr>
+          <td class="col-item">アンダークラス人口</td>
+          <td class="col-old">推計700万人台</td>
+          <td class="col-new">890万人（就業人口の13.9%）<span class="tag-up">▲増加</span></td>
+        </tr>
+        <tr>
+          <td class="col-item">企業の内部留保</td>
+          <td class="col-old">約400兆円</td>
+          <td class="col-new">638兆円（13年連続最高更新）<span class="tag-up">▲急増</span></td>
+        </tr>
+        <tr>
+          <td class="col-item">労働分配率</td>
+          <td class="col-old">67〜68%台</td>
+          <td class="col-new">64.2%（2024年）<span class="tag-down">▼低下</span></td>
+        </tr>
+        <tr>
+          <td class="col-item">配当金総額</td>
+          <td class="col-old">—</td>
+          <td class="col-new">1960年度比で約132倍に拡大</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 用語解説 -->
+    <details class="glossary">
+      <summary class="glossary-title">📖 用語解説 — この表に出てくるキーワードの意味<span class="glossary-toggle"></span></summary>
+      <div class="glossary-grid">
+        <div class="glossary-item">
+          <div class="glossary-term">世帯所得の中央値</div>
+          <div class="glossary-def">全世帯の所得を低い順に並べたとき、<em>ちょうど真ん中</em>に位置する世帯の金額。平均値と違い、極端に高い所得の影響を受けない。「普通の家庭の実態」を示す指標。</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">ジニ係数</div>
+          <div class="glossary-def">社会全体の<em>所得格差の大きさ</em>を0〜1の数値で表す指標。0に近いほど平等、1に近いほど格差が大きい。日本の当初所得ベースは0.570と、先進国の中でも高い水準。</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">相対的貧困率</div>
+          <div class="glossary-def">国民の所得中央値の<em>半分（貧困線）を下回る人の割合</em>。「食べられない」絶対的貧困とは異なり、その社会の水準と比較した格差を示す。日本の貧困線は約127万円（2019年）。</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">アンダークラス（人口）</div>
+          <div class="glossary-def">早稲田大・橋本健二教授が命名。パート主婦を除く<em>非正規労働者</em>の集団。平均年収216万円、男性未婚率74.5%という社会の最下層に固定されやすい層。890万人＝就業者の7人に1人。</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">企業の内部留保</div>
+          <div class="glossary-def">企業が利益から税・配当を差し引いた後に<em>社内に蓄積した資金</em>の累積額。将来への投資や万一の備えとして必要だが、増やしすぎると賃金や設備投資に回らない批判がある。</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">労働分配率</div>
+          <div class="glossary-def">企業が生み出した付加価値のうち、<em>人件費として労働者に分配される割合</em>。数値が下がるほど、稼いだ利益が給料ではなく株主や内部留保に回っていることを意味する。</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">配当金総額</div>
+          <div class="glossary-def">企業が株主に支払う<em>利益の分け前（配当）の合計額</em>。1960年度比132倍とは、賃金の伸びをはるかに超えるペースで株主への還元が増えてきたことを示す。</div>
+        </div>
+      </div>
+    </details>
+
+    <div class="highlight-box">
+      <div class="hl-title">📌 ここが重要</div>
+      <p>企業は記録的な利益を上げながら、その恩恵を従業員に還元せず内部留保と株主配当に回し続けた。2015年のコーポレートガバナンス・コード導入以降、この傾向は特に加速している。「働いても豊かになれない」という感覚は、データに裏付けられた現実である。</p>
+    </div>
+  </div>
+
+  <!-- ===== Section 2: 現状の深堀り ===== -->
+  <div class="section" id="sec2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div class="section-title-wrap">
+        <div class="section-subtitle">Current Situation</div>
+        <h2>現状の深堀り——アンダークラス890万人の実態と構造</h2>
+      </div>
+    </div>
+
+    <p class="body-text">早稲田大学の橋本健二教授は現代日本社会を5つの階級に分類し、パート主婦以外の非正規労働者を「アンダークラス」と名付けた。就業人口の約7人に1人がここに属する。</p>
+
+    <div class="data-cards">
+      <div class="data-card">
+        <div class="label">アンダークラス人口</div>
+        <div class="value">890<span style="font-size:1rem">万人</span></div>
+        <div class="note">就業人口の13.9%</div>
+      </div>
+      <div class="data-card">
+        <div class="label">平均年収（アンダークラス）</div>
+        <div class="value">216<span style="font-size:1rem">万円</span></div>
+        <div class="note">正規労働者の約4割</div>
+      </div>
+      <div class="data-card">
+        <div class="label">男性の未婚率（同クラス）</div>
+        <div class="value">74.5<span style="font-size:1rem">%</span></div>
+        <div class="note">家庭形成が困難な水準</div>
+      </div>
+      <div class="data-card">
+        <div class="label">ひとり親世帯の貧困率</div>
+        <div class="value">44.5<span style="font-size:1rem">%</span></div>
+        <div class="note">特に母子世帯に集中</div>
+      </div>
+    </div>
+
+    <!-- 図3: 5階級構造 -->
+    <div class="chart-wrap">
+      <div class="chart-title">図3｜現代日本の5階級構造（橋本健二教授による分類）</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-row-label">資本家階級</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:12%; background:#b71c1c;">少数</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">新中間階級<br><span style="font-size:0.68rem;color:#aaa;">管理職・専門職</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:30%; background:#c62828;">縮小傾向</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">正規労働者</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:55%; background:#1565c0;">多数派</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">パート主婦</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:38%; background:#ef6c00;">家計補助型</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label" style="font-weight:bold;color:#b71c1c;">アンダー<br>クラス</div>
+          <div class="bar-track">
+            <div class="bar-fill accent" style="width:100%;">890万人（7人に1人）　年収216万円　未婚率74.5%</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-note">出典：橋本健二「2022年三大都市圏調査」</div>
+    </div>
+
+    <!-- 図4: 世代別賃金変化 -->
+    <div class="chart-wrap">
+      <div class="chart-title">図4｜世代別賃金変化率（2014年→2024年の10年間）</div>
+      <div class="dual-bar-chart">
+        <div class="dual-axis-label">
+          <span>← マイナス（減少）</span>
+          <span>プラス（増加）→</span>
+        </div>
+        <div class="dual-row">
+          <div class="dual-label">20〜24歳<br><span style="font-size:0.68rem;color:#aaa;">若年世代</span></div>
+          <div class="dual-track-neg"></div>
+          <div class="dual-center"></div>
+          <div class="dual-track-pos">
+            <div class="dual-bar-pos" style="width:148px;">+14.8%</div>
+          </div>
+        </div>
+        <div class="dual-row">
+          <div class="dual-label">30〜34歳</div>
+          <div class="dual-track-neg"></div>
+          <div class="dual-center"></div>
+          <div class="dual-track-pos">
+            <div class="dual-bar-pos" style="width:60px;">+6%</div>
+          </div>
+        </div>
+        <div class="dual-row">
+          <div class="dual-label">40代前半<br><span style="font-size:0.68rem;color:#b71c1c;">就職氷河期世代</span></div>
+          <div class="dual-track-neg" style="justify-content:flex-end;">
+            <div class="dual-bar-neg" style="width:50px;">−3%</div>
+          </div>
+          <div class="dual-center"></div>
+          <div class="dual-track-pos"></div>
+        </div>
+        <div class="dual-row">
+          <div class="dual-label">50代前半<br><span style="font-size:0.68rem;color:#b71c1c;">就職氷河期世代</span></div>
+          <div class="dual-track-neg" style="justify-content:flex-end;">
+            <div class="dual-bar-neg" style="width:80px;">−5〜6%</div>
+          </div>
+          <div class="dual-center"></div>
+          <div class="dual-track-pos"></div>
+        </div>
+      </div>
+      <div class="chart-note">出典：日経ビジネス（2025年10月）｜同じ職場でも「世代」で明暗が分かれる</div>
+    </div>
+
+    <div class="quote-box">
+      <p>「アンダークラスの賃金には次世代の労働力を再生産する費用が含まれていないため、このままだと資本主義の存続が揺らぎかねない」</p>
+      <div class="quote-src">— 橋本健二 早稲田大学教授（日経ビジネス 2025年10月）</div>
+    </div>
+
+    <p class="body-text">見えにくい貧困の入り口として「無園児問題」も深刻だ。3歳を超えても幼稚園・保育園に通えない子どもは約10万人。低所得世帯の4歳児は最高所得層の1.5倍、未就園の可能性が高い。小学校入学前の「見えない6年間」が格差の起点になっている。</p>
+  </div>
+
+  <!-- ===== Section 3: 本当に貧困になったのか？ ===== -->
+  <div class="section" id="sec3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div class="section-title-wrap">
+        <div class="section-subtitle">Is It Really Poverty?</div>
+        <h2>本当に貧困になったのか？——反論と「見えにくい貧困」の裏付け</h2>
+      </div>
+    </div>
+
+    <p class="body-text">「昔と比べれば豊かだ」という反論もある。オリックスの宮内義彦氏は著書『PROGRESS』を引きながら「現在の日本人の生活は有史以来最高で、数百年前の王侯貴族を超える」と述べた。この視点は一定の説得力を持つ。しかし、現代の「貧困」は絶対的な飢えではなく、社会的排除・機会の喪失という形で現れる「相対的貧困」であることを見落としている。</p>
+
+    <!-- 図5: G7貧困率比較 -->
+    <div class="chart-wrap">
+      <div class="chart-title">図5｜G7各国の相対的貧困率比較</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-row-label">アメリカ</div>
+          <div class="bar-track">
+            <div class="bar-fill accent" style="width:95%;">約18%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label" style="font-weight:bold;">日本 ★</div>
+          <div class="bar-track">
+            <div class="bar-fill mid" style="width:81%;">15.4%（G7で2位）</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">イギリス</div>
+          <div class="bar-track">
+            <div class="bar-fill blue" style="width:65%;">約12〜13%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">カナダ</div>
+          <div class="bar-track">
+            <div class="bar-fill blue" style="width:60%;">約12%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">ドイツ</div>
+          <div class="bar-track">
+            <div class="bar-fill green" style="width:53%;">約10〜11%</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label">フランス</div>
+          <div class="bar-track">
+            <div class="bar-fill green" style="width:50%;">約10%</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-note">出典：OECD統計（概算値）｜「豊かな先進国」日本が抱える貧困率の高さ</div>
+    </div>
+
+    <!-- 反論 vs 裏付け -->
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>「貧困ではない」という反論</th>
+          <th>データによる裏付け</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-old">「食べるものには困っていない」</td>
+          <td class="col-new">相対的貧困率15.4%（G7で2位）。絶対的飢えとは別次元の問題</td>
+        </tr>
+        <tr>
+          <td class="col-old">「大学進学率は上がっている」</td>
+          <td class="col-new">教育格差は入り口（就園前）から発生。未就園児10万人の多くは低所得層</td>
+        </tr>
+        <tr>
+          <td class="col-old">「再分配で格差は補正されている」</td>
+          <td class="col-new">再分配後ジニ係数は横ばい＝拡大を「抑制」しているだけ。格差の固定化は深刻</td>
+        </tr>
+        <tr>
+          <td class="col-old">「男女格差や地域格差は縮小している」</td>
+          <td class="col-new">女性の賃金は男性の75.8%。非正規労働者の7割が女性という構造は不変</td>
+        </tr>
+        <tr>
+          <td class="col-old">「景気回復で雇用は増えた」</td>
+          <td class="col-new">増えたのは非正規。過去20年で正規・非正規の賃金格差はほぼ縮まらず</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      <div class="hl-title">📌 「平均の罠」に注意</div>
+      <p>GDPや平均賃金で見れば改善に見える。しかし<strong>中央値・分布・機会の平等</strong>で見ると、日本の貧困は深化している。「平均値」は格差を隠す。見るべきは「誰が取り残されているか」だ。</p>
+    </div>
+
+    <p class="body-text">政策の限界もある。コロナ禍で全国民に一律10万円が給付されたのは、「本当に困っている人がどこにいるかわからない」からだった。所得捕捉とマイナンバーの整備なしに、ピンポイント支援は不可能なまま続いている。</p>
+  </div>
+
+  <!-- ===== Section 4: これからの予測 ===== -->
+  <div class="section" id="sec4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div class="section-title-wrap">
+        <div class="section-subtitle">Future Outlook</div>
+        <h2>これからの予測——格差固定化が加速するシナリオと変革のポイント</h2>
+      </div>
+    </div>
+
+    <p class="body-text">現状の構造が変わらなければ、格差の固定化はさらに深刻になる。同時に、変化のきっかけもいくつか見えてきている。</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">近い将来（〜2027年）</div>
+        <div class="timeline-text">最低賃金1500円目標が実現した場合、「低賃金の非正規依存で収益を確保する企業」は経営が立ち行かなくなる。中小企業の再編・淘汰が加速する可能性がある。</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">中期（2028〜2035年）</div>
+        <div class="timeline-text">就職氷河期世代が50代後半に入り、老後貧困リスクが顕在化。年金受給年齢の引き上げ（75歳程度）や資産課税強化が政策課題になる。アンダークラスの高未婚率が人口減少をさらに加速させる。</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">構造変化のカギ</div>
+        <div class="timeline-text">「フレキシキュリティ（柔軟な労働市場＋手厚い生活保障）」の導入。マイナンバーを活用した所得捕捉と給付の精緻化。非正規から正規へのスムーズな移動を支える職業訓練の拡充。</div>
+      </div>
+      <div class="timeline-item optimistic">
+        <div class="timeline-year">✅ 楽観シナリオ</div>
+        <div class="timeline-text">AI・DXによる生産性向上が賃上げ原資を生み出し、労働分配率が回復。正規・非正規の壁が薄れ、女性の「胃袋型」非正規キャリアが解消。所得捕捉の整備で貧困の「見えない化」が解消される。</div>
+      </div>
+      <div class="timeline-item pessimistic">
+        <div class="timeline-year">⚠️ 悲観シナリオ</div>
+        <div class="timeline-text">内部留保と株主還元優先が続き、労働分配率がさらに低下。アンダークラスが1000万人を超え、少子化と経済停滞の悪循環が深まる。外国人労働者への依存が拡大し、社会統合コストが増大する。</div>
+      </div>
+    </div>
+
+    <!-- 図6: 楽観・悲観シナリオ分岐 -->
+    <div class="chart-wrap">
+      <div class="chart-title">図6｜シナリオを分ける3つの政策変数</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-row-label" style="font-size:0.72rem;">最低賃金<br>1500円実現</div>
+          <div class="bar-track">
+            <div class="bar-fill green" style="width:70%;">中小企業の再編と底上げへ</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label" style="font-size:0.72rem;">所得捕捉・<br>マイナ活用</div>
+          <div class="bar-track">
+            <div class="bar-fill blue" style="width:60%;">ピンポイント支援が可能に</div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-row-label" style="font-size:0.72rem;">DX利益の<br>労働者還元</div>
+          <div class="bar-track">
+            <div class="bar-fill accent" style="width:80%;">最重要。仕組みなければ格差拡大</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-note">3つすべてが実現した場合のみ楽観シナリオへ</div>
+    </div>
+  </div>
+
+  <!-- ===== 「〇〇が意味すること」===== -->
+  <div class="meaning-box" id="sec5">
+    <h2>✦ 「格差社会」が意味すること——このデータは私たちに何を問いかけているか</h2>
+    <ul class="meaning-list">
+      <li>
+        <div class="m-subject">「アンダークラス890万人・7人に1人」が意味すること</div>
+        <div class="m-body">これは他人事ではない。自社の社員・取引先・顧客の中に、すでにこの層と隣接している人がいる可能性がある。非正規・低賃金は「個人の問題」ではなく、雇用構造がつくり出した社会問題だ。</div>
+      </li>
+      <li>
+        <div class="m-subject">「内部留保638兆円・13年連続最高更新」が意味すること</div>
+        <div class="m-body">企業は儲かっている。しかし、その果実は株主と内部留保に優先的に回り、労働者の賃金に届いていない。「企業が豊かになれば国民も豊かになる」というトリクルダウンは機能しなかった。</div>
+      </li>
+      <li>
+        <div class="m-subject">「就職氷河期世代の賃金がマイナス」が意味すること</div>
+        <div class="m-body">40〜50代は経験と責任が最も重い世代でありながら、賃金は下がり続けている。この世代が老後に向かうとき、年金・貯蓄ともに不足するリスクが高い。次の社会問題はすでに約束されている。</div>
+      </li>
+      <li>
+        <div class="m-subject">「ひとり親世帯の貧困率44.5%」が意味すること</div>
+        <div class="m-body">日本の貧困問題は、多くがシングルマザー問題にたどり着く。女性が非正規に固定される労働市場の構造を変えなければ、子どもの貧困も世代を越えて再生産され続ける。</div>
+      </li>
+      <li>
+        <div class="m-subject">「無園児10万人・見えない6年間」が意味すること</div>
+        <div class="m-body">貧困は生まれた瞬間から始まる。就学前の教育機会の差が、その後の学力・就職・収入のすべてに影響する。入り口で格差が生まれている社会は、出口でどれだけ手を打っても追いつかない。</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ===== 出典 ===== -->
+  <div class="sources">
+    <h3>出典・参考記事</h3>
+    <ul>
+      <li>「中流消滅、7人に1人が最下層 格差データが示す日本企業の罪」日経ビジネス（2025年10月23日）</li>
+      <li>「労働移動と生活保障の両立を 雇用激変に備える」権丈英子 亜細亜大学教授、日経経済教室（2021年1月14日）</li>
+      <li>「無園児 社会から置き去り」日本経済新聞（2019年7月6日）</li>
+      <li>「親の世代より豊かか貧しいか」宮内義彦 オリックス シニア・チェアマン（2017年2月24日）</li>
+      <li>総務省「労働力調査」、厚生労働省「国民生活基礎調査」、橋本健二「2022年三大都市圏調査」、財務省「法人企業統計」</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    TOKO LIFE TREND NEWS ／ 特集「日本の貧困」— 社内勉強会資料 2026年4月17日
+  </div>
+
+</div><!-- /container -->
+</body>
+</html>
